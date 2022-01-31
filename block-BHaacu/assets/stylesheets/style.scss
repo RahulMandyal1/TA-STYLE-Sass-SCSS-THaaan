@@ -1,0 +1,1019 @@
+@import "cssreset";
+@import "generalstyle";
+
+
+// Color palette used in the project 
+$primary : #DC3C45; 
+$secondary : #1B1E24;
+$tertiary : #343A40;
+$light : #F2F2F2;
+// flex start here 
+.flex{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+.middel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
+.flex-29{
+    flex: 0 1 29%;
+}
+.flex-48{
+    flex: 0 1 48%;
+}
+.flex-20{
+    flex: 0 1 20%;
+}
+
+.flex-40{
+    flex:  0 1 40%;
+}
+.flex-45{
+    flex: 0 1 45%;
+}
+.flex-50{
+    flex: 0 1 50%;
+}
+.flex-23{
+    flex: 0 1 23%;
+}
+.flex-35
+{
+    flex: 0 1 35%;
+}
+
+p{
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+h5{
+    text-align: center;
+    color:$secondary;
+    font:{
+        weight: 900;
+        size: 2.4rem;
+    }
+}
+
+section{
+    padding:6%  9%;
+    h2{
+        text-align: center;
+        color:$secondary;
+        font:{
+            weight: 900;
+            size: 3.6rem;
+        }
+    }
+    p{
+        text-align: center;
+        margin: 1rem 0 ;
+        color: grey;
+    }
+}
+
+section p:first-child{
+    padding: 0 11%;
+    text-align: center;
+}
+.btn{
+    padding: .8rem 1.6rem;
+    border-radius:1.6rem ;
+    border: none;
+    background: transparent;
+    border: .1rem solid $primary;
+    color: $primary;
+    font-weight: 700;
+}
+// styling for  social icons  
+%social-icon{
+    font-size: 2rem;
+    color: #fff;
+    margin:  0 1rem  0 0 ;
+}
+
+.header{
+    width: 100%;
+}
+// styling the secondary navigation 
+.secondary-navigation{
+    width: 100%;
+    background-color: $primary;
+    padding:1rem 9%;
+    .container{
+        width: 100%;
+        i{
+            @extend %social-icon;
+        }
+    }
+    address{
+        .gmail{
+            margin-left: 1rem;
+        }
+        a{
+            i{
+                margin: 0 0 0 .5rem;
+            }
+        }
+    }
+}
+// styling the primary navigation 
+.primary-navigation{
+    background-color: $light;
+    padding: 0px 9%;
+        .logo{
+            color: $primary;
+            font:{
+                size:2.5rem;
+                weight:900;
+            }
+            & span{
+                color:$secondary;
+            }
+        }
+         nav {
+            a{
+                padding:2rem .8rem;
+                margin: 0 1rem;
+                color: $secondary;
+                &:hover{
+                    background-color: $primary;
+                    color: #fff;
+                    height: 100%;
+                }    
+            }
+        }
+        .hamburg-container{
+            padding: .8rem 1rem;
+            background: $primary;
+            border-radius: .5rem;
+            color: $light;
+            display: none;
+        }
+        .hide-menu{
+            display: none;
+        }
+        label > i {
+            display: none;
+        }
+        // styling the drop down menu 
+        .drop-down-container{
+            position: relative;
+        }   
+        .drop-down{
+            position: absolute;
+            margin: 0 1rem;
+            top: 100%;
+            left: 0;
+            background: #dddddd;
+            width: 15rem;
+            display: none;
+            a{
+                margin: 1rem 0 ;
+                padding: 0 2rem;
+                &:hover{
+                    background-color: transparent;
+                    color: $primary;
+                }
+            }
+        }
+        .drop-down-container:hover .drop-down{
+            display: inline-block;
+        }
+
+}
+
+
+
+// header ends here 
+.hero{
+    padding: 0px 9%;
+    height: 90vh;
+    width: 100%;
+    background:{
+        image :url('../media/banner-1.jpg');
+        position: center;
+        size: cover; 
+    }
+    .container{
+        height: 100%;
+        flex-flow: column wrap;
+        align-items: flex-start;
+    }
+    h1{
+        font:{
+            size:5rem;
+            weight:900;
+        }
+        line-height: 4.5rem;
+    }    
+    p{
+        color: $secondary;
+        font-size: 1.8rem;
+        font-weight: 500;
+        margin: 2rem 0 ;
+    }
+    .btn{
+        background: $primary;
+        color: $light;
+    }
+}
+
+// services section start here 
+#services{
+    .container{
+        margin: 5rem 0 ;
+    }
+    .flex-29{
+        width: 100%;
+        padding: 4rem 2rem;
+        border-radius:.5rem ;
+        flex-flow: column;
+        outline: .1rem solid #dddddd;
+   
+        p{
+            margin: 1.6rem;
+        }
+    }
+    figure{
+        width: 20%;
+    }
+    figure img{
+        width: 100%;
+    }
+    h4{
+        margin: 1.6rem  0 0 0;
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    .btn{
+        background: transparent;
+        border: .1rem solid $primary;
+        color: $primary;
+        &:hover{
+            background: $primary;
+            color: #fff;
+        }
+    }
+}
+// services section ends here 
+// all type solution section starts here 
+#alltypesol{
+    background: $light;
+    article{
+        padding:  0 9%;
+        p{
+            margin: 2.4rem  0 ;
+        }
+    }
+}
+
+// all type solution section ends here 
+
+// Our consulting team section starts  here 
+#centered-text{
+    article{
+        align-items: flex-start;
+        figure{
+            width: 100%;
+        }
+        figure img{
+            width: 100%;
+        }
+        .icon{
+            width: 20%;
+        }
+        .icon img{
+            width: 100%;
+        }
+        .introductry-text{
+            padding: 0 6%;
+        }
+        h5{
+            text-align: center;
+            margin: 1.6rem 0 ;
+        }
+        .btn{
+            margin: 1.6rem 0 0 0;
+        }
+    }
+}
+// Our consulting team  section end here 
+
+// buisness section start from  here 
+#buisness-service{
+    padding: 3% 9%;
+    background: $primary;
+    color: $light;
+    p{
+        color: $light;
+    }
+    .btn{
+        background: $light;
+        color: $primary;
+    }
+}
+
+// industry-leader section start here 
+#industry-leader{
+    padding: 8% 9%;
+    position: relative;
+    article{
+        justify-content:space-between ;
+ 
+        h5{
+            text-align: left;
+        }
+        p{
+            text-align: left;
+        }
+    }
+    .article-img{
+        figure{
+            position:absolute;
+            width: 45rem;
+            bottom: 0;
+            right: 10rem;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+// industry leader section ends here 
+// our client section starts here 
+#our-clients{
+    background: $light;
+    figure{
+        width: 10%;
+        img{
+            width: 100%;
+            filter: grayscale(100%);
+           &:hover{
+              filter: grayscale(0%);
+           }
+        }
+    }
+    h2{
+        margin-bottom: 5rem;
+    }
+}
+// our client section ends here 
+
+// footer section starts here 
+
+#footer-section{
+    padding: 4% 9%;
+    background: $tertiary;
+    .container{
+        align-items: flex-start;
+    }
+    .col-heading{
+        font-size: 1.8rem;
+        color: #7D7E7F;
+        margin: 0 0 2rem 0;
+    }
+    a{
+        color: #7D7E7F;
+    }
+    address a{
+        display: block;
+        margin:  1rem 0;
+        font-size: 1.4rem;
+        & i{
+            margin: 0 .8rem 0  0  ;
+        }
+    }
+    nav  a{
+        margin: .5rem 0  ;
+        font-size: 1.2rem;
+    }
+    .social-links-container a{
+        color: #7D7E7F;
+        margin: 0 .8rem 0 0 ;
+    }
+
+    .copyright-information{
+        color: #7D7E7F;
+        font-size: 1.4rem;
+        margin: 2rem 0 0 0;
+        small{
+            margin: .5rem 0;
+        }
+    }
+}
+// Footer section ends here 
+
+// every section page intorductry styling start here 
+.page-introductry{
+    background: $primary;
+    color: #fff;
+    h2,p{
+        color: #fff;
+    }
+    padding:3% 9%;
+}
+// Every section page introdcutry styling start here 
+
+// service page styling start here 
+
+// Our consulting team section starts  here 
+#our-services-container{
+    article{
+        align-items: flex-start;
+        justify-content: flex-start;
+        figure{
+            width: 100%;
+        }
+        figure img{
+            width: 100%;
+        }
+        h2{
+            text-align: left;
+            line-height: 5rem;
+        }
+        p{
+            text-align: left;
+            padding: 0  2rem 0 0 ;
+        }
+        .icon{
+            width: 20%;
+        }
+        .icon img{
+            width: 100%;
+        }
+        .btn{
+            margin: 1.6rem 0 0 0;
+        }
+    }
+}
+// service page styling ends here 
+
+// our product section start here 
+.card-container{
+    background: $light;
+    p{
+        text-align: center;
+    }
+}
+.card-wrapper {
+    margin: 5rem  0 ;
+    h5{
+        text-align: left;
+        font-size: 2rem;
+        font-weight: 600;
+        margin: 1.6rem 0 ;
+    }
+    p{
+        text-align: left;
+    }
+    .flex-29{
+        width: 100%;
+        margin:  0 0 3rem 0;
+        figure{
+            width: 25%;
+        }
+        img{
+            width: 100%;
+        }
+    }
+}
+// our product section ends here 
+
+.service-article{
+    h5{
+        font-size: 3rem;
+        line-height: 3.5rem;
+        text-align: center;
+    }
+    article{
+        margin: 7rem 0 ;
+    }
+}
+
+
+
+// *********** contact page styling start here *************** 
+.contact-us{
+
+    .address-container{
+        margin: 6rem 0 0 0;
+    }
+    // icon container 
+    .icon-container{
+        width: 8rem;
+        height: 8rem;
+        background-color: $light;
+        border-radius:50% ;
+        i{
+            font-size: 4rem;
+            color: $primary;
+        }
+    }
+    .flex-29{
+        flex-flow: column;
+        align-items: center;
+    }
+    h6{
+        margin: 1.2rem;
+        font-weight: 700;
+    }
+}
+// map form  start here 
+.map-form-container{
+    .container{
+        align-items: flex-start;
+        margin: 5rem 0 0 0;
+    }
+    .flex-48{
+        width: 100%;
+    }
+    iframe{
+        width: 100%;
+        height: 50vh;
+    }
+    form{
+        flex-flow: column wrap;
+        padding: 0 3rem ;
+    }
+    .input-box{
+        width: 100%;
+        padding: 1rem;
+        border: .1rem solid #dddddd;
+        display: inline-block;
+        margin: 0 0 1.6rem 0;
+        outline: none;
+    }
+    .btn{
+        background-color: $primary;
+        color: $light;
+    }
+}
+// map form ends  here 
+
+
+// ************* About page styling start here ************** 
+// our team section starts here 
+.ourteam{
+    background: $light;
+    .container{
+        margin: 5rem  0 0 0;
+    }
+    .flex-23{
+        background:#fff;
+        width: 100%;
+        padding: 2rem;
+        box-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+        
+        p{
+            color: $primary;
+            font-size: 1.4rem;
+        }
+    }
+    figure{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    
+    }
+    h4{
+        text-align: center;
+        font-size: 1.9rem;
+        margin: 1rem  0 ;
+        font-weight: 600;
+    }
+
+}
+
+.core-principles {
+    .flex-35{
+        figure{
+            width: 70%;
+            
+        }
+        img{
+            width: 100%;
+        }
+    }
+    .core-container{
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+    .icon{
+        flex: 0 1 10%;
+    }
+    i{
+        font-size: 5rem;
+    }
+    .introductry-text{
+        flex:0 1 85%;
+    }
+    h5{
+        text-align: left;
+    }
+    p{
+        text-align: left;
+    }
+}
+
+// all type of solution section starts here  
+.about-solution{
+    background: #fff;
+}
+
+.about{
+    h5{
+        font-size:3.2rem;
+        line-height: 4rem;
+    }
+}
+// core principle section start here 
+.core-principles{
+    figure
+    {
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+
+// pricing page styling start here 
+.pricing-card{
+    background: $light;
+    .container{
+        margin: 5rem 0 0 0;
+    }
+    .card{
+        padding: 3.5rem 2rem;
+        background: #fff;
+        box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    }
+    a{
+        font-size: 1.3rem;
+        color: $secondary;
+        margin: 1rem 0 ;
+    }
+    .btn{
+        margin: 1rem 0 0 0;
+    }
+    .active-btn{
+        background: $primary;
+        color: $light;
+    }
+    h4{
+        font-size: 3rem;
+        font-weight: 900;
+        color: $secondary;
+    }
+    .plans{
+      font-weight: 700;
+      font-size:1.8rem;
+    }
+    .include-feature{
+        font-size:1.8rem;
+        font-weight: 600;
+        margin: 1rem 0 2rem 0;
+    }
+}
+
+// faq section start here 
+
+#FAQ{
+    .container{
+        margin:5rem 0 0 0;
+    }
+    .faq-card{
+        border: .1rem solid #dddddd;
+        padding: 2rem;
+        border-radius: .5rem;
+        margin:  0 0 2rem 0;
+        h3{
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: $secondary;
+        }
+        p{
+            text-align: left;
+            margin: 2rem 0 0 0 ;
+            font-size: 1.5rem;
+        }
+    }
+}
+// responsive start  here 
+@media screen  and (max-width :768px){
+    html{
+        font-size: 55%;
+    }
+   
+    section p:first-child{
+        padding: 1rem;
+        text-align: center;
+    }
+    section {
+        h2{
+            font-size: 3rem;
+            line-height: 3rem;
+        }
+    }
+    .flex{
+        flex-flow: column wrap;
+    }
+    section{
+        padding: 4rem 2rem;
+    }
+    
+    p{
+        font-size: 1.2rem;
+    }
+   .flex-29{
+     flex: 0 1 100%;
+   }
+    .flex-48{
+        flex: 0 1 100%;
+    }
+    .flex-20{
+        flex: 0 1 100%;
+    }
+    
+    .flex-40{
+        flex:  0 1 100%;
+    }
+    .flex-45{
+        flex: 0 1 100%;
+    }
+    .flex-50{
+        flex: 0 1 100%;
+    }
+    .flex-23{
+        flex: 0 1 100%;
+    }
+    .flex-35
+    {
+        flex: 0 1 100%;
+    }
+    .header {
+        position: relative;
+        .container{
+            display: flex;
+            flex-direction: row;
+            padding: 2rem;
+            border-bottom: .1rem #D5E5E5;
+        
+        }
+        ul{
+           a{
+            color: $light;
+           }
+        }
+        .hamburg-container{
+            display: inline-block;
+        }
+        nav{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100vh;
+            background: $primary;
+            z-index: 111;
+            display: none;
+            
+        } 
+        input[type = 'checkbox']:checked ~ nav{
+            display: inline-block;
+        }
+    }
+    .secondary-navigation{
+        align-items: flex-start;
+        .container{
+            flex-flow: row wrap;
+        }
+    }
+    .primary-navigation {
+     .drop-down{
+        background: #fff;
+      
+        a{
+            color: $secondary;
+        }
+     }
+       
+    }
+  
+    .page-introductry{
+        padding: 9%  2%;
+    }
+    .primary-navigation{
+        padding: 0 ;
+    }
+    .hero h1{
+        font-size: 3.7rem;
+    }
+    // about page styling starts here 
+    .core-principles{
+     .flex-35{
+        figure{
+            width: 100%;
+        }
+        img{
+            width: 100%;
+        }
+        margin:   0 0  2rem 0;
+     }
+       .core-container{
+           flex-flow: row wrap;
+           .icon{
+               flex: 0 1 20%;
+           }
+           .introductry-text{
+               flex: 0 1 75%;
+               margin:  2rem 0 0 0 ;
+           }
+       }
+    }
+
+    .ourteam{
+        .container{
+            flex-flow: row wrap;
+        }
+        .flex-23{
+            flex: 0 1 48%;
+            margin: 2rem 0 0 0;
+        }
+    }
+    .about h5{
+        font-size: 2.4rem;
+    }
+
+    // about page styling ends here 
+
+    h5{
+        text-align: center;
+        color:$secondary;
+        font:{
+            weight: 900;
+            size: 2rem;
+        }
+    }
+    h2{
+        font-size: 2.4rem;
+    }
+    #services{
+        .flex-29{
+            margin: 1rem 0;
+        }
+    }
+    #centered-text{
+        figure{
+            margin: 2rem 0 ;
+        }
+    }
+    #industry-leader{
+        height: auto;
+        padding: 4rem;
+        .article-img{
+            position: static;
+            width: 100%;
+            display:block;
+            margin: 2rem 0 0 0;
+            figure
+            {
+                width: 100%;
+                position: static;
+            }
+            figure img{
+                width: 100%;
+            }
+        }
+    }
+    // our client section start  hrere 
+    .client-icon-container{
+        flex-direction:  row;
+        figure{
+            width: 25%;
+            overflow: hidden;
+        }
+    }
+    
+
+    footer{
+        flex-direction: column;
+        .flex-20{
+            margin-top: 2rem ;
+        }
+    }
+    // pricing page styling start here 
+    .pricing-card{
+        .container{
+            flex-direction: row;
+        }
+        .card{
+            margin: 2rem 0 ;
+            width: 100%;
+        }
+        .flex-29{
+            flex: 0 1 48%;
+        }
+    }
+    
+    // Pricing page styling ends here 
+
+    // contact  page  styling start  here 
+    .map-form-container{
+        form{
+            margin: 2rem  0 ;
+        }
+    }
+}
+// conatct page styling ends here
+
+// services page styling starts here
+
+// services page styling ends here 
+// Responsive ends here 
+@media screen  and (max-width :480px){
+    html{
+        font-size: 50%;
+    }
+    .drop-down{
+        background: #fff;
+        color: $secondary;
+    }
+    .social-links-container{
+        
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+    }
+    p{
+        font-size: 1.3rem;
+    }
+    section p:first-child{
+        padding: 1rem;
+        text-align: justify;
+    }
+    h5{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 2.6rem;
+    }
+  .ourteam{
+    .container{
+        flex-flow: column wrap;
+    }
+        .flex-23{
+            flex: 0 1 10%;
+            margin: 2rem 0 0 0;
+        }
+    }
+
+    // contact page styling start here
+    .address-container{
+        address{
+            margin: 2rem 0 ;
+        }
+    }
+    .map-form-container{
+        form{
+            padding: 1rem ;
+        }
+    }
+    // contact page   styling ends here 
+      // pricing page styling start here 
+      .pricing-card{
+        .container{
+            flex-direction: column;
+        }
+    
+        .flex-29{
+            flex: 1 1 100%;
+        }
+    }
+    
+    // Pricing page styling ends here 
+    // services page styling starts here \
+    #our-services-container{
+        h2{
+            font-size: 2.4rem;
+            text-align: justify;
+        }
+    }
+    .service-article {
+        h5{
+            font-size: 2rem;
+        }
+    }
+    // services page styling ends here 
+}
